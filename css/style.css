@@ -1,0 +1,322 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'PT Serif', serif;
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
+
+
+.nav-toggle {
+    float: right;
+    margin: 10px 20px 10px 10px;
+    cursor: pointer;
+}
+
+.nav-toggle img {
+    margin-top: 10px;
+    width: 40px;
+    display: inline-block;
+}
+
+nav {
+    display: block;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    box-shadow: inset 0 3px 6px -6px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.16);
+    background-color: #202027;
+}
+
+.navlist {
+    clear: both;
+    display: none;
+    margin-bottom: 20px;
+}
+
+.is-active {
+    display: block;
+}
+
+.navlist a {
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: 'PT Serif', serif;
+}
+
+#logo {
+    float: left;
+    margin-right: 1em;
+    margin-top: 11px;
+    margin-left: 1em;
+
+}
+
+#logo img {
+    width: 100px;
+}
+
+}
+
+.video_container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#shortVideo {
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+#slogan {
+    margin-top: 800px;
+    font-family: 'PT Serif', serif;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.orange {
+    color: #D6620C;
+}
+
+.img1 {
+    width: 100%;
+}
+
+#indexdesc {
+    padding: 15px;
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+h1 {
+    padding: 10px;
+    margin-top: 80px;
+    text-transform: uppercase;
+    font-family: 'PT Serif', serif;
+    text-align: center;
+}
+
+
+#img_contact {
+    position: relative;
+    height: 50%;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+#name_contact {
+    text-align: center;
+    font-family: 'PT Serif', serif;
+
+
+}
+
+#desc_contact {
+    font-family: 'PT Serif', serif;
+    text-align: center;
+    color: #303030;
+    margin-top: -3px;
+
+
+}
+
+#p_contact {
+    font-family: 'PT Serif', serif;
+    text-align: center;
+    margin-top: -5px;
+    padding: 20px;
+}
+
+.icon_contact{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    color: #d6620c;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .shortVideo {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #shortVideo {
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+@media all and (min-width: 798px) {
+    #shortVideo {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+.timeline_header{
+    color: #d6620c;
+}
+
+.timeline_text{
+    color: white;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #202027;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #d6620c;
+  border: 4px solid #d6620c;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #202027;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #202027;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #202027;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #202027 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #303030;
+  position: relative;
+  border-radius: 6px;
+}
+
+
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid #202027;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #202027 transparent transparent;
+  }
+
+  .left::after, .right::after {
+    left: 18px;
+  }
+
+  .right {
+    left: 0%;
+  }
+}
