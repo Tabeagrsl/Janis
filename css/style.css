@@ -8,7 +8,15 @@
 
 body{
     font-family: 'PT Serif', serif;
+    position: relative;
+    min-height: 100vh;
+}
+main{padding-bottom: 100px;
 
+}
+
+.img{
+    width: 70%;
 }
 
 @import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
@@ -28,12 +36,11 @@ body{
 
 nav {
     display: block;
-    text-align: center;
+
     width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
-
     background-color: #202027;
 }
 
@@ -52,6 +59,8 @@ nav {
 }
 
 .navlist a {
+
+    font-size: 25px;
     position: relative;
     background-color: transparent;
     text-decoration: none;
@@ -60,19 +69,19 @@ nav {
     padding: 10px;
     text-transform: uppercase;
     font-family: 'PT Serif', serif;
+      padding-left: 30px;
 }
 
 .navlist a:hover {
     color: white;
 }
 
-.navlist > a:before {
+.navlist a:before {
   content: "";
   position: absolute;
-  width: 16%;
+  width: 50%;
   height: 1px;
   bottom: 10px;
-  left: 42%;
   background-color: #d6620c;
   visibility: hidden;
   transform: scaleX(0);
@@ -98,25 +107,16 @@ nav {
 
 }
 
-.video_container {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-}
 
 #shortVideo {
     position: absolute;
     top: 0;
-    left: -60%;
-    width: 100%;
-    height: 100%;
 
 }
 
 
 #slogan {
-    margin-top: 800px;
+
     font-family: 'PT Serif', serif;
     padding: 20px;
     text-align: center;
@@ -141,7 +141,7 @@ nav {
 
 h1 {
     padding: 10px;
-    margin-top: 80px;
+    margin-top: 90px;
     text-transform: uppercase;
     font-family: 'PT Serif', serif;
     text-align: center;
@@ -178,6 +178,7 @@ h1 {
     text-align: center;
     margin-top: -5px;
     padding: 20px;
+
 }
 
 .icon_contact{
@@ -202,7 +203,8 @@ h1 {
 
 @media (max-aspect-ratio: 16/9) {
     #shortVideo {
-        width: auto;
+        object-fit:cover;
+        width: 100vw;
         height: 100%;
     }
 }
@@ -360,12 +362,61 @@ h1 {
 }
 
 .footer{
-position: sticky;
-  left: 0;
-  bottom: 0;
+    position: absolute;
+
+bottom:0;
   width: 100%;
   background-color: #202027;
   color: white;
   text-align: center;
     padding: 20px;
+}
+
+.video_container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.name_template{
+    font-size: 20px;
+    text-align: left;
+}
+
+.img_template{
+    width:100%;
+    height:auto;
+
+}
+.artwork{
+    position: relative;
+}
+
+.modalimg{
+    width: 100px;
+}
+.modal{
+    display:none;
+    position: absolute;
+    top:20%;
+}
+.visible {
+    display:block;
+}
+
+#nav_category{
+    margin-top: 100px;
+}
+
+li{
+    font-size: 15px;
+    display: inline-block;
+    padding: 12px;
+    cursor: pointer;
+
+
+}
+ul :hover{
+    color: #d6620c;
 }
