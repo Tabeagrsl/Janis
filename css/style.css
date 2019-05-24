@@ -194,12 +194,16 @@ h1 {
     left: 35%;
 }
 
-@media (min-aspect-ratio: 16/9) {
-    .shortVideo {
-        width: 100%;
-        height: auto;
+
+@media all and (min-width: 798px) {
+    #shortVideo {
+         object-fit:cover;
+        width: 100vw;
+        height: 100%;
     }
+
 }
+
 
 @media (max-aspect-ratio: 16/9) {
     #shortVideo {
@@ -207,16 +211,6 @@ h1 {
         width: 100vw;
         height: 100%;
     }
-}
-
-
-@media all and (min-width: 798px) {
-    #shortVideo {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
 }
 
 
@@ -420,3 +414,74 @@ li{
 ul :hover{
     color: #d6620c;
 }
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: orange;}
