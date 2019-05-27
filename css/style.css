@@ -6,20 +6,24 @@
     box-sizing: inherit;
 }
 
-body{
-    font-family: 'PT Serif', serif;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
     position: relative;
     min-height: 100vh;
 }
-main{padding-bottom: 100px;
+
+main {
+    padding-bottom: 100px;
 
 }
 
-.img{
+.img {
     width: 70%;
 }
 
-@import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
+
 
 
 .nav-toggle {
@@ -44,8 +48,8 @@ nav {
     background-color: #202027;
 }
 
-#indexpage{
-    background-color: rgba(0,0,0,0);
+#indexpage {
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .navlist {
@@ -68,8 +72,8 @@ nav {
     display: block;
     padding: 10px;
     text-transform: uppercase;
-    font-family: 'PT Serif', serif;
-      padding-left: 30px;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 30px;
 }
 
 .navlist a:hover {
@@ -77,20 +81,20 @@ nav {
 }
 
 .navlist a:before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 1px;
-  bottom: 10px;
-  background-color: #d6620c;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.6s ease-in-out 0s;
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 10px;
+    background-color: #d6620c;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.6s ease-in-out 0s;
 }
 
 .navlist a:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
+    visibility: visible;
+    transform: scaleX(1);
 }
 
 #logo {
@@ -117,7 +121,6 @@ nav {
 
 #slogan {
 
-    font-family: 'PT Serif', serif;
     padding: 20px;
     text-align: center;
     font-size: 18px;
@@ -134,7 +137,6 @@ nav {
 #indexdesc {
     padding: 15px;
     text-align: center;
-    font-family: 'PT Serif', serif;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -143,7 +145,6 @@ h1 {
     padding: 10px;
     margin-top: 90px;
     text-transform: uppercase;
-    font-family: 'PT Serif', serif;
     text-align: center;
 }
 
@@ -159,13 +160,11 @@ h1 {
 
 #name_contact {
     text-align: center;
-    font-family: 'PT Serif', serif;
 
 
 }
 
 #desc_contact {
-    font-family: 'PT Serif', serif;
     text-align: center;
     color: #303030;
     margin-top: -3px;
@@ -174,14 +173,13 @@ h1 {
 }
 
 #p_contact {
-    font-family: 'PT Serif', serif;
     text-align: center;
     margin-top: -5px;
     padding: 20px;
 
 }
 
-.icon_contact{
+.icon_contact {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -190,14 +188,14 @@ h1 {
     left: 60%;
 }
 
-.icon_call{
+.icon_call {
     left: 35%;
 }
 
 
 @media all and (min-width: 798px) {
     #shortVideo {
-         object-fit:cover;
+        object-fit: cover;
         width: 100vw;
         height: 100%;
     }
@@ -207,7 +205,7 @@ h1 {
 
 @media (max-aspect-ratio: 16/9) {
     #shortVideo {
-        object-fit:cover;
+        object-fit: cover;
         width: 100vw;
         height: 100%;
     }
@@ -215,154 +213,156 @@ h1 {
 
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
-.timeline_header{
+.timeline_header {
     color: #d6620c;
     font-size: 15px;
 }
 
-.timeline_text{
+.timeline_text {
     color: white;
     font-size: 13px;
 }
 
-.sub_header{
+.sub_header {
     text-align: center;
     padding: 20px;
 }
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: #202027;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #202027;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
 }
 
 /* Container around content */
 .container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
 }
 
 /* The circles on the timeline */
 .container::after {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  right: -17px;
-  background-color: #d6620c;
-  border: 4px solid #d6620c;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: -17px;
+    background-color: #d6620c;
+    border: 4px solid #d6620c;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
 }
 
 
 .left {
-  left: 0;
+    left: 0;
 }
 
 .right {
-  left: 50%;
+    left: 50%;
 }
 
 /* Add arrows to the left container (pointing right) */
 .left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid #202027;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #202027;
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #202027;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #202027;
 }
 
 /* Add arrows to the right container (pointing left) */
 .right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid #202027;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent #202027 transparent transparent;
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #202027;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #202027 transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
 .right::after {
-  left: -8px;
+    left: -8px;
 }
 
 /* The actual content */
 .content {
-  padding: 20px 30px;
-  background-color: #303030;
-  position: relative;
-  border-radius: 6px;
+    padding: 20px 30px;
+    background-color: #303030;
+    position: relative;
+    border-radius: 6px;
 }
 
 
 @media screen and (max-width: 600px) {
-/* Place the timelime to the left */
-  .timeline::after {
-    left: 45px;
-  }
 
-  .container {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 45px;
+    }
 
-/* Make sure that all arrows are pointing leftwards */
-  .container::before {
-    left: 60px;
-    border: medium solid #202027;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #202027 transparent transparent;
-  }
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
 
-  .left::after, .right::after {
-    left: 37px;
-  }
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 60px;
+        border: medium solid #202027;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #202027 transparent transparent;
+    }
 
-  .right {
-    left: 0%;
-  }
+    .left::after,
+    .right::after {
+        left: 37px;
+    }
+
+    .right {
+        left: 0%;
+    }
 }
 
-.footer{
+.footer {
     position: absolute;
 
-bottom:0;
-  width: 100%;
-  background-color: #202027;
-  color: white;
-  text-align: center;
+    bottom: 0;
+    width: 100%;
+    background-color: #202027;
+    color: white;
+    text-align: center;
     padding: 20px;
 }
 
@@ -373,37 +373,40 @@ bottom:0;
     overflow: hidden;
 }
 
-.name_template{
+.name_template {
     font-size: 20px;
     text-align: left;
 }
 
-.img_template{
-    width:100%;
-    height:auto;
+.img_template {
+    width: 100%;
+    height: auto;
 
 }
-.artwork{
+
+.artwork {
     position: relative;
 }
 
-.modalimg{
+.modalimg {
     width: 100px;
 }
-.modal{
-    display:none;
+
+.modal {
+    display: none;
     position: absolute;
-    top:20%;
-}
-.visible {
-    display:block;
+    top: 20%;
 }
 
-#nav_category{
+.visible {
+    display: block;
+}
+
+#nav_category {
     margin-top: 100px;
 }
 
-li{
+li {
     font-size: 15px;
     display: inline-block;
     padding: 12px;
@@ -411,77 +414,85 @@ li{
 
 
 }
-ul :hover{
+
+ul :hover {
     color: #d6620c;
 }
 
 /* Slideshow container */
 .slideshow-container {
-  position: relative;
-  background: #f1f1f1f1;
+    position: relative;
+    background: #f1f1f1f1;
 }
 
 /* Slides */
 .mySlides {
-  display: none;
-  padding: 80px;
-  text-align: center;
+    display: none;
+    padding: 80px;
+    text-align: center;
 }
 
 /* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -30px;
-  padding: 16px;
-  color: #888;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
-  position: absolute;
-  right: 0;
-  border-radius: 3px 0 0 3px;
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-  color: white;
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
 }
 
 /* The dot/bullet/indicator container */
 .dot-container {
-  text-align: center;
-  padding: 20px;
-  background: #ddd;
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
 }
 
 /* The dots/bullets/indicators */
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
 /* Add a background color to the active dot/circle */
-.active, .dot:hover {
-  background-color: #717171;
+.active,
+.dot:hover {
+    background-color: #717171;
 }
 
 /* Add an italic font style to all quotes */
-q {font-style: italic;}
+q {
+    font-style: italic;
+}
 
 /* Add a blue color to the author */
-.author {color: orange;}
+.author {
+    color: orange;
+}
