@@ -385,6 +385,7 @@ h1 {
 .img_template {
     width: 100%;
     height: auto;
+    cursor: pointer;
 
 }
 
@@ -394,6 +395,10 @@ h1 {
 
 .modalimg {
     width: 100px;
+}
+
+#openModal {
+    display: none;
 }
 
 
