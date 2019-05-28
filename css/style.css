@@ -193,6 +193,7 @@ h1 {
 }
 
 
+
 @media all and (min-width: 798px) {
     #shortVideo {
         object-fit: cover;
@@ -357,13 +358,16 @@ h1 {
 
 .footer {
     position: absolute;
-
-    bottom: 0;
+    bottom: -80px;
     width: 100%;
     background-color: #202027;
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+.footer_logo{
+    width: 150px;
 }
 
 .video_container {
