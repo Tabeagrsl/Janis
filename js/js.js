@@ -123,6 +123,10 @@ function createHTML(data) {
 
             clone.querySelector('.name_template').innerHTML = data[i].title.rendered;
             clone.querySelector('.inner .name_template').innerHTML = data[i].title.rendered;
+            clone.querySelector('.country_template').innerHTML = data[i].place;
+           clone.querySelector('.date_template').innerHTML = data[i].year;
+
+
 
 
 
@@ -162,8 +166,8 @@ function createHTML(data) {
 
 function artworkExpand() {
     console.log('opened');
-    console.log(this.nextElementSibling);
-    this.nextElementSibling.nextElementSibling.classList.toggle("visible");
+    //console.log(this.nextElementSibling);
+    this.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.classList.toggle("visible");
 }
 function artworkClose() {
     console.log('closed');
@@ -204,3 +208,4 @@ function showSlides(n) {
         dots[slideIndex - 1].className += " active";
     }
 }
+

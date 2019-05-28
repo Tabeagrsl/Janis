@@ -390,7 +390,8 @@ h1 {
 }
 
 .artwork {
-
+border: 1px solid black;
+    padding: 5px;
 }
 
 .modalimg {
@@ -417,13 +418,13 @@ h1 {
 
 
 }
-.modal .inner .gallery {
+/*.modal .inner .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 .modal .inner h1 {
     grid-column: 1/-1;
-}
+}*/
 .img_template {
     transition:all 0.2s;
 }
