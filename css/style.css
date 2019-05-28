@@ -389,19 +389,42 @@ h1 {
 }
 
 .artwork {
-    position: relative;
+
 }
 
 .modalimg {
     width: 100px;
 }
 
+
 .modal {
     display: none;
-    position: absolute;
-    top: 20%;
+    position: fixed;
+    background: rgba(0,0,0,0.8);
+    width:100vw;
+    height: 100vh;
+    top:10vh;
+    left:0vw;
 }
+.modal .inner {
+    background: white;
+    margin: 2em;
 
+
+}
+.modal .inner .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.modal .inner h1 {
+    grid-column: 1/-1;
+}
+.img_template {
+    transition:all 0.2s;
+}
+.img_template:hover {
+    opacity:0.3;
+}
 .visible {
     display: block;
 }

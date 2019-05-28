@@ -8,7 +8,7 @@ if (templateElement) {
 /*var templateElement = document.querySelector(".img_template");*/
 const main = document.querySelector("main");
 const allli = document.querySelectorAll("li")
-var MyLink = "https://janiskarasevskis.tabeagrsl.com/wp-json/wp/v2/artwork?_embed";
+var MyLink = "https://janiskarasevskis.tabeagrsl.com/wp-json/wp/v2/artwork?_embed&per_page=100";
 console.log(burger)
 burger.addEventListener('click', function () {
     console.log("hi")
@@ -112,15 +112,17 @@ function createHTML(data) {
         for (var i = 0; i < data.length; i++) {
             const clone = template.cloneNode(true);
             console.log(data[i]);
-            clone.querySelector('button').addEventListener("click", artworkExpand);
+            clone.querySelector('.img_template').addEventListener("click", artworkExpand);
+            clone.querySelector('.modal button').addEventListener("click", artworkClose);
             if(data[i]._embedded['wp:featuredmedia']){
                 clone.querySelector('.img_template').src = data[i]._embedded['wp:featuredmedia']["0"].source_url;
+                //clone.querySelector('.img_template').src = data[i]._embedded['wp:featuredmedia']["0"].media_details.sizes.thumbnail.source_url
             } else {
                 clone.querySelector('.img_template').remove()
             }
 
             clone.querySelector('.name_template').innerHTML = data[i].title.rendered;
-
+            clone.querySelector('.inner .name_template').innerHTML = data[i].title.rendered;
 
 
 
@@ -131,15 +133,18 @@ function createHTML(data) {
             //clone.querySelector('.event-date').innerHTML = date.substr(0,10);
             //clone.querySelector('.event-time').innerHTML = time.substr(0,5);
             if (data[i].gallery !== false) {
-                console.log('runs');
-                console.log(data[i].gallery["1"].guid);
+                //console.log('runs');
+                //console.log(data[i].gallery["1"].guid);
 
                 for (var j = 0; j < data[i].gallery.length; j++) {
 
                     var image = document.createElement("img");
-                    image.src = data[i].gallery[j].guid;
+                    //https://janiskarasevskis.tabeagrsl.com/wp-content/uploads/2019/05/9-11.jpg
+                    const withoutJPG = data[i].gallery[j].guid.substring(0, data[i].gallery[j].guid.length - 4)
+                    const cropped = withoutJPG+"-150x150.jpg"
+                    image.src = cropped;
                     image.classList.add("modalimg");
-                    clone.querySelector('.modal').appendChild(image);
+                    clone.querySelector('.inner').appendChild(image);
 
 
                 }
@@ -158,9 +163,13 @@ function createHTML(data) {
 function artworkExpand() {
     console.log('opened');
     console.log(this.nextElementSibling);
-    this.nextElementSibling.classList.toggle("visible");
+    this.nextElementSibling.nextElementSibling.classList.toggle("visible");
 }
+function artworkClose() {
+    console.log('closed');
 
+    this.parentElement.parentElement.classList.toggle("visible");
+}
 
 
 
