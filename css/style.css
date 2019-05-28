@@ -24,8 +24,6 @@ main {
 }
 
 
-
-
 .nav-toggle {
     float: right;
     margin: 10px 20px 10px 10px;
@@ -358,7 +356,7 @@ h1 {
 
 .footer {
     position: absolute;
-    bottom: -80px;
+    bottom: -130px;
     width: 100%;
     background-color: #202027;
     color: white;
@@ -366,9 +364,30 @@ h1 {
     padding: 20px;
 }
 
-.footer_logo{
+.footer_logo {
     width: 150px;
 }
+
+#copyright {
+    font-size: 12px;
+}
+
+.nav-footer {
+    padding: 20px;
+}
+
+.nav-footer a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    transition: all 0.4s;
+}
+
+.nav-footer a:hover {
+    color: #d6620c;
+}
+
+
 
 .video_container {
     position: relative;
@@ -390,7 +409,7 @@ h1 {
 }
 
 .artwork {
-border: 1px solid black;
+    border: 1px solid black;
     padding: 5px;
 }
 
@@ -406,18 +425,20 @@ border: 1px solid black;
 .modal {
     display: none;
     position: fixed;
-    background: rgba(0,0,0,0.8);
-    width:100vw;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100vw;
     height: 100vh;
-    top:10vh;
-    left:0vw;
+    top: 10vh;
+    left: 0vw;
 }
+
 .modal .inner {
     background: white;
     margin: 2em;
 
 
 }
+
 /*.modal .inner .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -426,11 +447,13 @@ border: 1px solid black;
     grid-column: 1/-1;
 }*/
 .img_template {
-    transition:all 0.2s;
+    transition: all 0.2s;
 }
+
 .img_template:hover {
-    opacity:0.3;
+    opacity: 0.3;
 }
+
 .visible {
     display: block;
 }
