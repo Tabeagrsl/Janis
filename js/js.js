@@ -9,9 +9,9 @@ if (templateElement) {
 const main = document.querySelector("main");
 const allli = document.querySelectorAll("li")
 var MyLink = "https://janiskarasevskis.tabeagrsl.com/wp-json/wp/v2/artwork?_embed&per_page=100";
-console.log(burger)
+//console.log(burger)
 burger.addEventListener('click', function () {
-    console.log("hi")
+    //console.log("hi")
     burger.classList.toggle('is-active');
     menu.classList.toggle('is-active');
 });
@@ -30,48 +30,48 @@ if (window.location.pathname === "/artwork.html") {
 
 function setupArtworkLinks() {
     allli[0].addEventListener("click", function () {
-        console.log("hallo");
+        //console.log("hallo");
         MyLink = "https://janiskarasevskis.tabeagrsl.com/wp-json/wp/v2/artwork?_embed&limit=100";
         JSONFetch(MyLink);
     })
 
     allli[1].addEventListener("click", function () {
-        console.log("hallo");
+        //console.log("hallo");
         MyLink = "https://janiskarasevskis.tabeagrsl.com/wp-json/wp/v2/artwork?categories=2&_embed";
         JSONFetch(MyLink);
     })
 
 
     allli[2].addEventListener("click", function () {
-        console.log("hallo");
+        //console.log("hallo");
         MyLink = "https://janiskarasevskis.tabeagrsl.com/wp-json/wp/v2/artwork?categories=3&_embed";
         JSONFetch(MyLink);
     })
 
 
     allli[3].addEventListener("click", function () {
-        console.log("hallo");
+        //console.log("hallo");
         MyLink = "https://janiskarasevskis.tabeagrsl.com/wp-json/wp/v2/artwork?categories=4&_embed";
         JSONFetch(MyLink);
     })
 
 
     allli[4].addEventListener("click", function () {
-        console.log("hallo");
+        //console.log("hallo");
         MyLink = "https://janiskarasevskis.tabeagrsl.com/wp-json/wp/v2/artwork?categories=7&_embed";
         JSONFetch(MyLink);
     })
 
 
     allli[5].addEventListener("click", function () {
-        console.log("hallo");
+        //console.log("hallo");
         MyLink = "https://janiskarasevskis.tabeagrsl.com/wp-json/wp/v2/artwork?categories=5&_embed";
         JSONFetch(MyLink);
     })
 
 
     allli[6].addEventListener("click", function () {
-        console.log("hallo");
+        //console.log("hallo");
         MyLink = "https://janiskarasevskis.tabeagrsl.com/wp-json/wp/v2/artwork?categories=6&_embed";
         JSONFetch(MyLink);
     })
@@ -92,7 +92,7 @@ function JSONFetch(link) {
             // Success!
             var data = JSON.parse(request.responseText);
             createHTML(data);
-            console.log(data);
+            //console.log(data);
 
         }
 
@@ -111,7 +111,7 @@ function createHTML(data) {
 
         for (var i = 0; i < data.length; i++) {
             const clone = template.cloneNode(true);
-            console.log(data[i]);
+            //console.log(data[i]);
             clone.querySelector('.img_template').addEventListener("click", artworkExpand);
             clone.querySelector('.modal button').addEventListener("click", artworkClose);
             if(data[i]._embedded['wp:featuredmedia']){
@@ -140,8 +140,9 @@ function createHTML(data) {
             //clone.querySelector('.event-date').innerHTML = date.substr(0,10);
             //clone.querySelector('.event-time').innerHTML = time.substr(0,5);
             if (data[i].gallery !== false) {
-                //console.log('runs');
-                //console.log(data[i].gallery["1"].guid);
+                ////console.log('runs');
+                ///console.log(data[i].gallery["1"].guid);
+                console.log(data[i].gallery["1"].guid);
 
                 for (var j = 0; j < data[i].gallery.length; j++) {
 
@@ -150,7 +151,7 @@ function createHTML(data) {
 
                   const withoutJPG = data[i].gallery[j].guid.substring(0, data[i].gallery[j].guid.length - 4)
                     const cropped = withoutJPG+"-150x150.jpg"
-                    image.src = cropped;
+                    image.src = data[i].gallery[j].guid;
                     image.classList.add("modalimg");
                     clone.querySelector('.inner').appendChild(image);
 
@@ -169,12 +170,12 @@ function createHTML(data) {
 };
 
 function artworkExpand() {
-    console.log('opened');
-    //console.log(this.nextElementSibling);
+    //console.log('opened');
+    ////console.log(this.nextElementSibling);
     this.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.classList.toggle("visible");
 }
 function artworkClose() {
-    console.log('closed');
+    //console.log('closed');
 
     this.parentElement.parentElement.classList.toggle("visible");
 }
