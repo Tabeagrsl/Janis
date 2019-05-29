@@ -123,6 +123,9 @@ function createHTML(data) {
 
             clone.querySelector('.name_template').innerHTML = data[i].title.rendered;
             clone.querySelector('.inner .name_template').innerHTML = data[i].title.rendered;
+              clone.querySelector('.desc_template').innerHTML = data[i].content.rendered;
+
+
             clone.querySelector('.country_template').innerHTML = data[i].place;
            clone.querySelector('.date_template').innerHTML = data[i].year;
 
@@ -144,7 +147,8 @@ function createHTML(data) {
 
                     var image = document.createElement("img");
                     //https://janiskarasevskis.tabeagrsl.com/wp-content/uploads/2019/05/9-11.jpg
-                    const withoutJPG = data[i].gallery[j].guid.substring(0, data[i].gallery[j].guid.length - 4)
+
+                  const withoutJPG = data[i].gallery[j].guid.substring(0, data[i].gallery[j].guid.length - 4)
                     const cropped = withoutJPG+"-150x150.jpg"
                     image.src = cropped;
                     image.classList.add("modalimg");
