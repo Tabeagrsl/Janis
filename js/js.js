@@ -31,7 +31,7 @@ if (window.location.pathname === "/artwork.html") {
 function setupArtworkLinks() {
     allli[0].addEventListener("click", function () {
         //console.log("hallo");
-        MyLink = "https://janiskarasevskis.tabeagrsl.com/wp-json/wp/v2/artwork?_embed&limit=100";
+        MyLink = "https://janiskarasevskis.tabeagrsl.com/wp-json/wp/v2/artwork?_embed&per_page=30";
         JSONFetch(MyLink);
     })
 
