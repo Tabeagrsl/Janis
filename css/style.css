@@ -8,6 +8,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
+@font-face{
+    font-family: Scratch;
+    src: url('/font/ScratchXBlack.ttf')
+}
 
 
 body {
@@ -62,16 +66,15 @@ nav {
 }
 
 .navlist a {
-
-    font-size: 15px;
+    font-family: Scratch;
+    font-size: 20px;
     position: relative;
     background-color: transparent;
     text-decoration: none;
     color: white;
     display: block;
-    padding: 10px;
+    padding: 15px;
     text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
     text-align: center;
 }
 
@@ -85,7 +88,7 @@ nav {
     width: 30%;
     height: 1px;
     bottom: 10px;
-    left: 192px;
+    left: 210px;
     background-color: #d6620c;
     visibility: hidden;
     transform: scaleX(0);
@@ -109,7 +112,7 @@ nav {
     width: 100px;
 }
 
-}
+
 
 
 #shortVideo {
@@ -120,6 +123,7 @@ nav {
 
 
 #slogan {
+font-family: Scratch;
 
     padding: 20px;
     text-align: center;
@@ -142,6 +146,8 @@ nav {
 }
 
 h1 {
+    font-family: Scratch;
+    text-transform: uppercase;
     padding: 10px;
     margin-top: 90px;
     text-transform: uppercase;
@@ -230,6 +236,8 @@ h1 {
 }
 
 .sub_header {
+    font-family: Scratch;
+    text-transform: uppercase;
     text-align: center;
     padding: 20px;
 }
@@ -359,7 +367,7 @@ h1 {
 
 .footer {
     position: absolute;
-    bottom: -130px;
+    bottom: -180px;
     width: 100%;
     background-color: #202027;
     color: white;
@@ -381,6 +389,9 @@ h1 {
 }
 
 .nav-footer a {
+    font-family: Scratch;
+    text-transform: uppercase;
+    font-size: 16px;
     text-decoration: none;
     color: white;
     padding: 20px;
@@ -503,9 +514,11 @@ h2{
     }
 
     li {
-        font-size: 15px;
+        font-family: Scratch;
+        text-transform: uppercase;
+        font-size: 12px;
         display: inline-block;
-        padding: 12px;
+        padding: 15px;
         cursor: pointer;
 
 
@@ -518,7 +531,7 @@ h2{
     /* Slideshow container */
     .slideshow-container {
         position: relative;
-        background: #f1f1f1f1;
+        background: #333333;
     }
 
     /* Slides */
@@ -554,24 +567,24 @@ h2{
     /* On hover, add a black background color with a little bit see-through */
     .prev:hover,
     .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
+/*        background-color: rgba(0, 0, 0, 0.8);*/
+        color: #d6620c;
     }
 
     /* The dot/bullet/indicator container */
     .dot-container {
         text-align: center;
-        padding: 20px;
-        background: #ddd;
+        padding: 1px;
+        background: #333333;
     }
 
     /* The dots/bullets/indicators */
     .dot {
         cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
+        height: 11px;
+        width: 11px;
+        margin: 0 5px;
+        background-color: #202027;
         border-radius: 50%;
         display: inline-block;
         transition: background-color 0.6s ease;
@@ -580,15 +593,16 @@ h2{
     /* Add a background color to the active dot/circle */
     .active,
     .dot:hover {
-        background-color: #717171;
+        background-color: #d6620c;
     }
 
     /* Add an italic font style to all quotes */
     q {
         font-style: italic;
+        color: white;
     }
 
     /* Add a blue color to the author */
     .author {
-        color: orange;
+        color: white;
     }
