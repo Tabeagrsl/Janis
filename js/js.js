@@ -107,60 +107,60 @@ function createHTML(data) {
     main.innerHTML = '';
 
 
-        template = templateElement.content
+    template = templateElement.content
 
-        for (var i = 0; i < data.length; i++) {
-            const clone = template.cloneNode(true);
-            //console.log(data[i]);
-            clone.querySelector('.img_template').addEventListener("click", artworkExpand);
-            clone.querySelector('.modal button').addEventListener("click", artworkClose);
-            if(data[i]._embedded['wp:featuredmedia']){
-                clone.querySelector('.img_template').src = data[i]._embedded['wp:featuredmedia']["0"].source_url;
-                //clone.querySelector('.img_template').src = data[i]._embedded['wp:featuredmedia']["0"].media_details.sizes.thumbnail.source_url
-            } else {
-                clone.querySelector('.img_template').remove()
-            }
-
-            clone.querySelector('.name_template').innerHTML = data[i].title.rendered;
-            clone.querySelector('.inner .name_template').innerHTML = data[i].title.rendered;
-              clone.querySelector('.desc_template').innerHTML = data[i].content.rendered;
-
-
-            clone.querySelector('.country_template').innerHTML = data[i].place;
-           clone.querySelector('.date_template').innerHTML = data[i].year;
-
-
-
-
-
-            // clone.querySelector('.event-category').innerHTML = catName[catIndex];
-            // clone.querySelector('.event-heading').innerHTML = data[i].title.rendered;
-            //let date = data[i].dateday;
-            //let time = data[i].timetime;
-            //clone.querySelector('.event-date').innerHTML = date.substr(0,10);
-            //clone.querySelector('.event-time').innerHTML = time.substr(0,5);
-            if (data[i].gallery !== false) {
-                ////console.log('runs');
-                ///console.log(data[i].gallery["1"].guid);
-                console.log(data[i].gallery["1"].guid);
-
-                for (var j = 0; j < data[i].gallery.length; j++) {
-
-                    var image = document.createElement("img");
-                    //https://janiskarasevskis.tabeagrsl.com/wp-content/uploads/2019/05/9-11.jpg
-
-                  const withoutJPG = data[i].gallery[j].guid.substring(0, data[i].gallery[j].guid.length - 4)
-                    const cropped = withoutJPG+"-150x150.jpg"
-                    image.src = data[i].gallery[j].guid;
-                    image.classList.add("modalimg");
-                    clone.querySelector('.inner').appendChild(image);
-
-
-                }
-            }
-
-            document.querySelector('main').appendChild(clone);
+    for (var i = 0; i < data.length; i++) {
+        const clone = template.cloneNode(true);
+        //console.log(data[i]);
+        clone.querySelector('.img_template').addEventListener("click", artworkExpand);
+        clone.querySelector('.modal button').addEventListener("click", artworkClose);
+       // clone.querySelector('.inner').addEventListener("scroll", scrollFunction);
+        if (data[i]._embedded['wp:featuredmedia']) {
+            clone.querySelector('.img_template').src = data[i]._embedded['wp:featuredmedia']["0"].source_url;
+            //clone.querySelector('.img_template').src = data[i]._embedded['wp:featuredmedia']["0"].media_details.sizes.thumbnail.source_url
+        } else {
+            clone.querySelector('.img_template').remove()
         }
+
+        clone.querySelector('.name_template').innerHTML = data[i].title.rendered;
+        clone.querySelector('.inner .name_template').innerHTML = data[i].title.rendered;
+        clone.querySelector('.desc_template').innerHTML = data[i].content.rendered;
+
+
+        clone.querySelector('.country_template').innerHTML = data[i].place;
+        clone.querySelector('.date_template').innerHTML = data[i].year;
+
+
+
+
+
+        // clone.querySelector('.event-category').innerHTML = catName[catIndex];
+        // clone.querySelector('.event-heading').innerHTML = data[i].title.rendered;
+        //let date = data[i].dateday;
+        //let time = data[i].timetime;
+        //clone.querySelector('.event-date').innerHTML = date.substr(0,10);
+        //clone.querySelector('.event-time').innerHTML = time.substr(0,5);
+        if (data[i].gallery !== false) {
+            ////console.log('runs');
+            //console.log(data[i].gallery["1"].guid);
+
+            for (var j = 0; j < data[i].gallery.length; j++) {
+
+                var image = document.createElement("img");
+                //https://janiskarasevskis.tabeagrsl.com/wp-content/uploads/2019/05/9-11.jpg
+
+                const withoutJPG = data[i].gallery[j].guid.substring(0, data[i].gallery[j].guid.length - 4)
+                const cropped = withoutJPG + "-150x150.jpg"
+                image.src = data[i].gallery[j].guid;
+                image.classList.add("modalimg");
+                clone.querySelector('.inner').appendChild(image);
+
+
+            }
+        }
+
+        document.querySelector('main').appendChild(clone);
+    }
 
 
 
@@ -174,9 +174,9 @@ function artworkExpand() {
     ////console.log(this.nextElementSibling);
     this.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.classList.toggle("visible");
 }
+
 function artworkClose() {
     //console.log('closed');
-
     this.parentElement.parentElement.classList.toggle("visible");
 }
 
@@ -214,3 +214,25 @@ function showSlides(n) {
     }
 }
 
+// When the user scrolls down 20px from the top of the document, show the button
+//window.onscroll = function() {scrollFunction()};
+
+
+/*
+function scrollFunction(e) {
+    console.log(e.target)
+    modalInner = e.target;
+    if (modalInner.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+*/
