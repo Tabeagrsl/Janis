@@ -401,10 +401,10 @@ h1 {
 .nav-footer a {
     font-family: Scratch;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 12px;
     text-decoration: none;
     color: white;
-    padding: 20px;
+    padding: 10px;
     transition: all 0.4s;
 }
 
@@ -413,10 +413,18 @@ h1 {
 }
 
 .mail_footer{
-    color: #d6620c;
+    color: white;
     padding: 10px;
+    font-size: 12px;
+    text-decoration: none;
 }
 
+.phone_footer{
+    color: white;
+    padding: 10px;
+    font-size: 12px;
+    text-decoration: none;
+}
 
 .video_container {
     position: relative;
