@@ -12,10 +12,14 @@
     font-family: Scratch;
     src: url('/font/ScratchXBlack.ttf')
 }
-html, body {
+
+
+html,
+body {
     width: 100%;
     overflow-x: hidden;
 }
+
 
 
 body {
@@ -41,7 +45,8 @@ main {
 }
 
 .nav-toggle img {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
     width: 40px;
     display: inline-block;
 }
@@ -83,21 +88,9 @@ nav {
 }
 
 .navlist a:hover {
-    color: white;
+    color: #d6620c;
 }
 
-.navlist a:before {
-    content: "";
-    position: absolute;
-    width: 30%;
-    height: 1px;
-    bottom: 10px;
-    left: 210px;
-    background-color: #d6620c;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.6s ease-in-out 0s;
-}
 
 .navlist a:hover:before {
     visibility: visible;
@@ -106,16 +99,18 @@ nav {
 
 .navcolor {
     background-color: #202027;
+}
 
-
+.navlist a:active {
+  color: #d6620c;
 }
 
 #logo {
     float: left;
     margin-right: 1em;
-    margin-top: 11px;
-    margin-left: 1em;
-
+    margin-top: 15px;
+    margin-left: 1.5em;
+    padding: 5px
 }
 
 #logo img {
@@ -171,8 +166,8 @@ h1 {
 
 #img_contact {
     position: relative;
-    height: 50%;
-    width: 50%;
+    height: 100%;
+    width: 80%;
     left: 50%;
     transform: translate(-50%);
 
@@ -199,9 +194,9 @@ h1 {
 
 }
 
-#icons{
+#icons {
     display: block;
- width: 100%;
+    width: 100%;
     text-align: center;
 
 }
@@ -248,11 +243,11 @@ h1 {
     box-sizing: border-box;
 }
 
-#textAboutJanis{
+#textAboutJanis {
     padding: 15px;
 }
 
-.embed-container{
+.embed-container {
     margin: 10px;
 }
 
@@ -460,7 +455,7 @@ h1 {
     overflow: hidden;
 }
 
-#arrow{
+#arrow {
     position: absolute;
     width: 30px;
     z-index: 5;
@@ -470,27 +465,54 @@ h1 {
     animation: arrow 1s infinite;
 }
 
-@keyframes arrow{
-    0% {bottom: 35px;}
-    50% {bottom: 45px;}
-    100% {bottom: 35px;}
+@keyframes arrow {
+    0% {
+        bottom: 35px;
+    }
+
+    50% {
+        bottom: 45px;
+    }
+
+    100% {
+        bottom: 35px;
+    }
 }
 
-.name_template {
-    font-size: 20px;
-    text-align: left;
+
+
+.artwork {
+    padding: 10px;
 }
 
 .img_template {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
+    position: relative;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+.country_template {
+    text-align: center;
+    font-size: 11px;
+}
+
+.date_template {
+    text-align: center;
+    font-size: 11px;
+}
+
+.name_template {
+    text-align: center;
+    font-family: Scratch;
+    text-transform: uppercase;
+    font-size: 15px;
 
 }
 
-.artwork {
-    border: 1px solid black;
-    padding: 5px;
+#nav_category {
+    text-align: center;
 }
 
 
@@ -566,7 +588,8 @@ h2 {
 }
 
 .img_template:hover {
-    opacity: 0.3;
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 .visible {
@@ -575,18 +598,13 @@ h2 {
 
 #nav_category {
     margin-top: 0px;
-    padding: 10px;
+    padding: 5px;
 }
 
 li {
-    font-family: Scratch;
-    text-transform: uppercase;
     font-size: 12px;
     display: inline-block;
     cursor: pointer;
-    padding: 7px;
-
-
 }
 
 ul :hover {
@@ -695,8 +713,7 @@ q {
 
 @media (min-width: 768px) {
 
-    nav
-    {
+    nav {
         position: relative;
         height: 70px;
     }
@@ -709,25 +726,31 @@ q {
         margin-right: 20px;
 
     }
-     .navlist a{
+
+    .navlist a {
         display: inline-block;
-         padding: 28px;
-         font-size: 15px;
+        padding: 28px;
+        font-size: 15px;
 
     }
 
-    .nav-toggle{
+    .nav-toggle {
         display: none;
     }
 
-    #indexpage{
+    #indexpage {
         height: 0;
         position: absolute;
     }
 
+     #slogan{
+        margin-top: 40px;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
 
     #img_contact {
-        width: 20%;
+        width: 60%;
     }
 
     #mainAbout {
@@ -741,23 +764,76 @@ q {
             " text video ";
     }
 
-    h1{
+    h1 {
         grid-area: header;
+        margin-top: -60px
+    }
+
+    /*
+
+#artworkGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+*/
+
+    .artwork {
+        padding: 50px;
+    }
+
+    .img_template {
+        position: relative;
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%);
     }
 
 
-    .embed-container{
+    .country_template {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .date_template {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .name_template {
+        text-align: center;
+        font-family: Scratch;
+        text-transform: uppercase;
+        font-size: 22px;
+
+    }
+
+    #nav_category {
+        text-align: center;
+
+    }
+
+    li {
+ font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        cursor: pointer;
+        padding: 14px;
+
+
+
+    }
+
+    .embed-container {
         grid-area: video;
         padding: 20px;
         margin-right: 20px;
     }
 
-    #textAboutJanis{
+    #textAboutJanis {
         grid-area: text;
         padding: 20px;
     }
 
-/*
+    /*
     .timeline{
         margin: 0 auto 100px auto;
     }
@@ -768,7 +844,93 @@ q {
 
 @media (min-width: 1200px) {
 
-    main {
-        background-color: #d6620c;
+    .navlist a {
+        font-size: 20px;
+    }
+
+    h1 {
+        margin-top: -60px
+    }
+
+    #img_contact {
+        width: 50%
+    }
+
+    .sub_header {
+        margin-top: 60px;
+    }
+
+    #textAboutJanis {
+        font-size: 22px;
+        padding: 50px;
+    }
+
+
+    .artwork {
+        padding: 50px;
+    }
+
+    .img_template {
+        position: relative;
+        width: 50%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .name_template {
+        text-align: center;
+        font-size: 25px;
+
+    }
+
+    .country_template {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .name_template {
+        font-family: Scratch;
+        text-transform: uppercase;
+        font-size: 20px;
+
+    }
+
+    .date_template {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #nav_category {
+        text-align: center;
+
+
+    }
+
+    li {
+        font-size: 18px;
+        cursor: pointer;
+        padding: 30px;
+    }
+
+    #slogan{
+        margin-top: 40px;
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+
+    #indexmain{
+         display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .img1{
+        padding: 20px;
+        width: 80%;
+        margin-left: 110px;
+
+    }
+    #indexdesc{
+        padding: 70px 150px 0px 30px;
+        text-align: left;
+
     }
 }
