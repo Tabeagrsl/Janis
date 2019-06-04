@@ -64,6 +64,10 @@ nav {
     /* background-color: #202027;*/
 }
 
+.navlist .current{
+    color: #d6620c;
+}
+
 /*#indexpage {
     background-color: rgba(0, 0, 0, 0);
 }*/
@@ -547,7 +551,7 @@ h2 {
     background: rgba(0, 0, 0, 0.8);
     width: 100vw;
     height: 100vh;
-    top: 10vh;
+    top: 0vh;
     left: 0vw;
     overflow: hidden;
     z-index: 1;
@@ -565,11 +569,11 @@ h2 {
 .close {
     position: fixed;
     margin-top: 20px;
-    margin-right: 10px;
+    margin-left: 20px;
     cursor: pointer;
     color: dimgrey;
     background: transparent;
-    font-size: 31px;
+    font-size: 40px;
     display: inline-block;
     line-height: 0px;
     padding: 11px 3px;
