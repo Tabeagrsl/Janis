@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html{
+scroll-behavior: smooth;
+    }
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 @font-face {
@@ -102,7 +106,7 @@ nav {
 }
 
 .navlist a:active {
-  color: #d6620c;
+    color: #d6620c;
 }
 
 #logo {
@@ -129,7 +133,6 @@ nav {
 
 #slogan {
     font-family: Scratch;
-
     padding: 20px;
     text-align: center;
     font-size: 18px;
@@ -457,10 +460,10 @@ h1 {
 
 #arrow {
     position: absolute;
-    width: 30px;
+    width: 50px;
     z-index: 5;
     bottom: 35px;
-    left: calc(50% - 30px);
+    left: calc(50% - 25px);
     transform: rotate(90deg);
     animation: arrow 1s infinite;
 }
@@ -521,10 +524,16 @@ h1 {
     padding: 20px;
 }
 
+.desc_template {
+    text-align: center;
+}
+
 
 #openModal {
     display: none;
 }
+
+
 
 h2 {
     margin-top: 20px;
@@ -554,9 +563,9 @@ h2 {
 }
 
 .close {
+    position: fixed;
     margin-top: 20px;
     margin-right: 10px;
-    float: right;
     cursor: pointer;
     color: dimgrey;
     background: transparent;
@@ -602,6 +611,7 @@ h2 {
 }
 
 li {
+    padding: 6px;
     font-size: 12px;
     display: inline-block;
     cursor: pointer;
@@ -743,7 +753,7 @@ q {
         position: absolute;
     }
 
-     #slogan{
+    #slogan {
         margin-top: 40px;
         font-size: 20px;
         text-transform: uppercase;
@@ -754,6 +764,7 @@ q {
     }
 
     #mainAbout {
+        width: 100%;
         padding-bottom: 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -764,6 +775,10 @@ q {
             " text video ";
     }
 
+
+     .sub_header {
+        margin-top: 0px;
+    }
     h1 {
         grid-area: header;
         margin-top: -60px
@@ -813,7 +828,7 @@ q {
     }
 
     li {
- font-family: 'Open Sans', sans-serif;
+        font-family: 'Open Sans', sans-serif;
         font-size: 15px;
         cursor: pointer;
         padding: 14px;
@@ -892,6 +907,7 @@ q {
         font-family: Scratch;
         text-transform: uppercase;
         font-size: 20px;
+        padding-top: 30px;
 
     }
 
@@ -912,25 +928,57 @@ q {
         padding: 30px;
     }
 
-    #slogan{
+    #slogan {
         margin-top: 40px;
         font-size: 25px;
         text-transform: uppercase;
     }
 
-    #indexmain{
-         display: grid;
+    #indexmain {
+        display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .img1{
+
+    .img1 {
         padding: 20px;
         width: 80%;
         margin-left: 110px;
 
     }
-    #indexdesc{
+
+    #indexdesc {
         padding: 70px 150px 0px 30px;
         text-align: left;
 
     }
+
+    .inner{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+        grid-template-areas:
+            " image"
+            " image "
+            " image ";
+    }
+
+
+    .modalimg{
+        grid-area: "image";
+        width: 50%;
+         position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        width: 50%;
+        padding: 10px;
+    }
+/*
+    .modalimg {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        width: 60%;
+        padding: 20px;
+    }
+*/
 }
