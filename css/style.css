@@ -109,6 +109,10 @@ nav {
     color: #d6620c;
 }
 
+.navlist .current {
+    color: #d6620c;
+}
+
 #logo {
     float: left;
     margin-right: 1em;
