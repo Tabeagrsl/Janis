@@ -232,7 +232,7 @@ h1 {
 .embed-container {
     position: relative;
     padding-bottom: 56.25%;
-    height: 0;
+    height: 100%;
     overflow: hidden;
     max-width: 100%;
     border: none;
@@ -994,33 +994,24 @@ q {
         font-size: 17px;
     }
 
-    .inner {
-        grid-gap: 15px;
+
+.inner{
         display: grid;
-        grid-template-areas:
-            "imagemodal"
-            "imagemodal"
-            "imagemodal";
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+
     }
 
 
-    .modalimg {
-        grid-area: imagemodal;
+    .modalimg{
         width: 50%;
-        position: relative;
+         position: relative;
         left: 50%;
         transform: translate(-50%);
         width: 50%;
         padding: 10px;
     }
 
-    /*
-    .modalimg {
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-        width: 60%;
-        padding: 20px;
-    }
-*/
+
+
 }
