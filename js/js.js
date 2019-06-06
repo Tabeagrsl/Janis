@@ -10,18 +10,22 @@ const main = document.querySelector("main");
 const allli = document.querySelectorAll("li")
 var MyLink = "https://janiskarasevskis.tabeagrsl.com/wp-json/wp/v2/artwork?_embed&per_page=100";
 //console.log(burger)
+
+console.log(window.location.pathname)
+
 burger.addEventListener('click', function () {
     //console.log("hi")
     burger.classList.toggle('is-active');
     menu.classList.toggle('is-active');
 });
 
-if (window.location.pathname === "/index.html") {
+if (window.location.pathname === "/janisblacksmith/index.html") {
+    console.log(window.location.pathname)
     var slideIndex = 1;
     showSlides(slideIndex);
 
 }
-if (window.location.pathname === "/artwork.html") {
+if (window.location.pathname === "/janisblacksmith/artwork.html") {
     JSONFetch(MyLink);
 
     setupArtworkLinks()

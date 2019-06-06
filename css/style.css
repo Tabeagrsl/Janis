@@ -15,7 +15,7 @@ html {
 
 @font-face {
     font-family: Scratch;
-    src: url('/font/ScratchXBlack.ttf')
+    src: url('../font/ScratchXBlack.ttf')
 }
 
 
@@ -995,15 +995,19 @@ q {
     }
 
 
-.inner{
+    .inner{
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 15px;
-
+        grid-template-areas:
+            " image"
+            " image "
+            " image ";
     }
 
 
     .modalimg{
+        grid-area: "image";
         width: 50%;
          position: relative;
         left: 50%;
@@ -1011,7 +1015,6 @@ q {
         width: 50%;
         padding: 10px;
     }
-
 
 
 }
