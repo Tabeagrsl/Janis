@@ -595,12 +595,12 @@ h2 {
 
 .close {
     position: fixed;
+    right: 2em;
     margin-top: 20px;
-    margin-left: 20px;
     cursor: pointer;
     color: dimgrey;
     background: transparent;
-    font-size: 40px;
+    font-size: 1.2em;
     display: inline-block;
     line-height: 0px;
     padding: 11px 3px;
@@ -1016,5 +1016,8 @@ q {
         padding: 10px;
     }
 
+.close {
+font-size: 1.9em;
 
+}
 }
